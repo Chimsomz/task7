@@ -1,0 +1,18 @@
+const { Router } = require('express');
+const router = Router ();
+
+const authFunc = require("../Controllers/authcontrollers");
+//create new location by adding
+router.post(`/addLoc`, authFunc.addLoc);
+//all location
+router.get(`/allLoc`, authFunc.allLoc);
+//cal distance btw fetched location and other
+router.post(`/:id/locdistance`,authFunc.calLocdistance);
+//fetch specific location
+router.get(`/:id/SpecificLoc`, authFunc.SpecificLoc);
+//edit location
+router.put(`/:id/editLoc`, authFunc.editLoc);
+//delete location
+router.delete(`/:id/delete`, authFunc.deleteLoc);
+
+module.exports = router;

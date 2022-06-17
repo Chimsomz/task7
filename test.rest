@@ -1,0 +1,10 @@
+POST http://localhost:3000/:id/locdistance
+Content-Type: application/json
+
+{
+"id": "Sommie", 
+"description":"Awka north",
+"website":"www.Anambra.com",
+"phone":81232323,
+"contactperson": "luchi"
+}
